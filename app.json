@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/apply/apply",
+    "pages/applicationdetails/index",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "差旅系统",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#abc88b",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "image/map-off.png",
+        "selectedIconPath": "image/map-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "image/home-off.png",
+        "selectedIconPath": "image/home-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "usingComponents": {
+    "mp-searchbar": "/weui/searchbar/searchbar",
+    "mp-dialog": "/weui/dialog/dialog",
+    "mp-badge": "/weui/badge/badge"
+  }
+}

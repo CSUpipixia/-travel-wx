@@ -1,0 +1,6 @@
+@import './weui/weui.wxss';
+
+.space {
+  height:20rpx;
+  background-color: #F2f2f2;
+}

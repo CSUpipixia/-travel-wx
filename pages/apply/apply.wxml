@@ -1,0 +1,69 @@
+<view class="weui-cells__title">出差申请单</view>
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <label for="" class="weui-label">起始日期</label>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" type="date" value="" />
+  </view>
+</view>
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <label class="weui-label">起始地点</label>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" type="text" />
+  </view>
+</view>
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <label class="weui-label">目的地</label>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" type="text" />
+  </view>
+</view>
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <label class="weui-label">出差天数</label>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" type="text" />
+  </view>
+</view>
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <label class="weui-label">出行方式</label>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" type="text" />
+  </view>
+</view>
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <label class="weui-label">出差原因</label>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" type="text" />
+  </view>
+</view>
+<view class="weui-cell">
+  <view class="weui-cell__hd">
+    <label class="weui-label">备注</label>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" type="text" />
+  </view>
+</view>
+
+<label for="weuiAgree" class="weui-agree">
+  <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox" />
+  <span class="weui-agree__text">
+    阅读并同意
+    <a href="javascript:void(0);">《相关条款》</a>
+  </span>
+</label>
+
+<view class="weui-btn-area">
+  <button class="weui-btn" type="primary" href="javascript:" id="showTooltips">确定</button>
+</view>
