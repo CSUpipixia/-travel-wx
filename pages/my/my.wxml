@@ -1,24 +1,62 @@
-<view class="container">
-  <view>
-    <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image src="/image/nologin.png" class="png" mode="widthFix"></image>
+    <view class="text-xl">
+      {{userInfo.nickName}}
+    </view>
+    <view class="margin-top-sm">
+      <text>产品经理</text>
+    </view>
+    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
   </view>
-  <view style="height:10rpx;background: #eee;width:100%;"></view>
-  <view class="my-item">
-    <navigator url="/pages/fx/apply-status" hover-class="navigator-hover">我的账户</navigator>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">27</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-goodsfill"></text> 出差次数</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">10</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-favorfill"></text> 去过城市</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">1873</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-moneybagfill"></text> 报销金额</view>
+    </view>
   </view>
-  <view style="height:10rpx;background: #eee;width:100%;"></view>
-  <view class="my-item">
-    <navigator url="/pages/sign/index" hover-class="navigator-hover">每日签到</navigator>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/weilanwl/ColorUI">
+        <text class="cuIcon-profilefill text-cyan"></text>
+        <text class="text-grey">我的信息</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">日志</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <text class="cuIcon-appreciatefill text-red"></text>
+        <text class="text-grey">赞赏支持</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-brown"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/test/list" hover-class="none">
+        <text class="cuIcon-creativefill text-orange"></text>
+        <text class="text-grey">Bug测试</text>
+      </navigator>
+    </view>
   </view>
-    <view class="my-item">
-    <navigator url="/pages/sign/index" hover-class="navigator-hover">意见反馈</navigator>
-  </view>
-  <view class="my-item" bindtap="aboutUs">
-    关于我们
-  </view>
-  <view style="height:10rpx;background: #eee;width:100%;"></view>
-  <view class="my-item" bindtap="loginOut" style="color:red;font-weight:bold;">
-    退出登录
-  </view>
-</view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

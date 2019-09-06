@@ -1,66 +1,63 @@
-// pages/apply/apply.js
+const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
+    DetailData: {
+      'applicant_id': '',
+      'startdate': '2018-12-25',
+      'duration': '1',
+      'start_site': ['湖南省', '长沙市', '岳麓区'],
+      'destination': ['湖南省', '长沙市', '岳麓区'],
+      'vehicle': '飞机',
+      'business_reason': '',
+      'remark': ''
+    },
+    DurationRange: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    VehicleRange: ['飞机', '高铁', '火车', '公司车辆'],
+    ReasonRange: []
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  DateChange(e) {
+    this.setData({
+      [`DetailData.startdate`]: e.detail.value
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  DurationChange(e) {
+    var data = this.data.DurationRange[e.detail.value];
+    this.setData({
+      [`DetailData.duration`]: data
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  StartSiteChange: function (e) {
+    this.setData({
+      [`DetailData.start_site`]: e.detail.value
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  DestinationChange: function(e) {
+    this.setData({
+      [`DetailData.destination`]: e.detail.value
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  VehicleChange(e) {
+    var data = this.data.VehicleRange[e.detail.value];
+    this.setData({
+      [`DetailData.vehicle`]: data
+    })
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  ReasonChange(e) {
+    var data = this.data.VehicleRange[e.detail.value];
+    this.setData({
+      [`DetailData.business_reason`]: data
+    })
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  onLoad: function(options) {
 
   }
 })

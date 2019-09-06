@@ -1,69 +1,63 @@
-<view class="weui-cells__title">出差申请单</view>
-<view class="weui-cell">
-  <view class="weui-cell__hd">
-    <label for="" class="weui-label">起始日期</label>
+<form>
+  <view class="cu-form-group margin-top">
+    <view class="title">起始日期</view>
+    <picker mode="date" value="{{date}}" start="2019-09-01" end="2022-09-01" bindchange="DateChange">
+      <view class="picker">
+        {{DetailData.startdate}}
+      </view>
+    </picker>
   </view>
-  <view class="weui-cell__bd">
-    <input class="weui-input" type="date" value="" />
+  <view class="cu-form-group">
+    <view class="title">出差天数</view>
+    <picker bindchange="DurationChange" value="{{index}}" range="{{DurationRange}}">
+      <view class="picker">
+        {{DetailData.duration}}
+      </view>
+    </picker>
   </view>
-</view>
-<view class="weui-cell">
-  <view class="weui-cell__hd">
-    <label class="weui-label">起始地点</label>
+  <view class="cu-form-group margin-top">
+    <view class="title">起始地</view>
+    <picker mode="region" bindchange="StartSiteChange" value="{{DetailData.start_site}}" custom-item="{{customItem}}">
+      <view class="picker">
+        {{DetailData.start_site[0]}}，{{DetailData.start_site[1]}}，{{DetailData.start_site[2]}}
+      </view>
+    </picker>
   </view>
-  <view class="weui-cell__bd">
-    <input class="weui-input" type="text" />
+  <view class="cu-form-group">
+    <view class="title">目的地</view>
+    <picker mode="region" bindchange="DestinationChange" value="{{DetailData.destination}}" custom-item="{{customItem}}">
+      <view class="picker">
+        {{DetailData.destination[0]}}，{{DetailData.destination[1]}}，{{DetailData.destination[2]}}
+      </view>
+    </picker>
   </view>
-</view>
-<view class="weui-cell">
-  <view class="weui-cell__hd">
-    <label class="weui-label">目的地</label>
+  <view class="cu-form-group">
+    <view class="title">出行方式</view>
+    <picker bindchange="VehicleChange" value="{{index}}" range="{{VehicleRange}}">
+      <view class="picker">
+        {{DetailData.vehicle}}
+      </view>
+    </picker>
   </view>
-  <view class="weui-cell__bd">
-    <input class="weui-input" type="text" />
+  <view class="cu-form-group margin-top">
+    <view class="title">出差原因</view>
+    <input placeholder="请输入出差原因">{{DetailData.business_reason}}</input>
   </view>
-</view>
-<view class="weui-cell">
-  <view class="weui-cell__hd">
-    <label class="weui-label">出差天数</label>
+  <view class="cu-form-group align-start">
+    <view class="title">备注</view>
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="请输入备注"></textarea>
   </view>
-  <view class="weui-cell__bd">
-    <input class="weui-input" type="text" />
+  <view class="cu-form-group margin-top">
+    <view class="title">阅读并同意
+      <a href="javascript:void(0);" class="text-blue">《相关条款》</a>
+    </view>
+    <checkbox class="round blue"></checkbox>
   </view>
-</view>
-<view class="weui-cell">
-  <view class="weui-cell__hd">
-    <label class="weui-label">出行方式</label>
-  </view>
-  <view class="weui-cell__bd">
-    <input class="weui-input" type="text" />
-  </view>
-</view>
-<view class="weui-cell">
-  <view class="weui-cell__hd">
-    <label class="weui-label">出差原因</label>
-  </view>
-  <view class="weui-cell__bd">
-    <input class="weui-input" type="text" />
-  </view>
-</view>
-<view class="weui-cell">
-  <view class="weui-cell__hd">
-    <label class="weui-label">备注</label>
-  </view>
-  <view class="weui-cell__bd">
-    <input class="weui-input" type="text" />
-  </view>
-</view>
+</form>
 
-<label for="weuiAgree" class="weui-agree">
-  <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox" />
-  <span class="weui-agree__text">
-    阅读并同意
-    <a href="javascript:void(0);">《相关条款》</a>
-  </span>
-</label>
-
-<view class="weui-btn-area">
-  <button class="weui-btn" type="primary" href="javascript:" id="showTooltips">确定</button>
+<view class="padding flex flex-direction">
+  <view class="flex  p-xs margin-bottom-sm mb-sm">
+    <button class="flex-sub padding-sm margin-xs cu-btn bg-grey lg">保存</button>
+    <button class="flex-twice padding-sm margin-xs cu-btn bg-blue lg">提交</button>
+  </view>
 </view>

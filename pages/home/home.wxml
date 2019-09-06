@@ -1,25 +1,12 @@
-<view class="container">
-  <view class='space'></view>
-  <view class="button-sp-area">
-    <button class="weui-btn" type="primary" bindtap="toApplyTap">出差申请</button>
-  </view>
-  <view class='space'></view>
-  <!-- 所有申请列表 -->
-  <view class="weui-loadmore weui-loadmore_line">
-    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">申请列表</view>
-  </view>
-  <view class='application-container'>
-    <view class='application-box' wx:for-items="{{applications}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
-      <view class="status-box">
-        
-      </view>
-      <view style='float: left'>
-        <view class="application-title">{{item.name}}</view>
-        <view style='display:flex;'>
-          <view class="application-detail">¥ {{item.price}}</view>
-        </view>
+<scroll-view scroll-y class="scrollPage">
+  <view class="cu-card">
+    <view class="cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg)" bindtap="toDetailsTap" wx:for-items="{{applications}}" data-id="{{item.id}}" wx:key="{{index}}">
+      <view class="cardTitle">
+        {{item.name}}
       </view>
     </view>
   </view>
+
   <view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-applications">没有更多啦</view>
-</view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

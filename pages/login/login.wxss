@@ -1,23 +1,74 @@
-form {
-  width:750rpx;
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 80rpx;
 }
-.logo {
-  width:200rpx;
-  margin-top:180rpx;
-  margin-left:275rpx;
+
+.register_input {
+  width: 80%;
+  height: 250rpx;
+  padding: 20rpx, 20rpx, 20rpx, 20rpx;
+  margin-left: 40rpx;
 }
-.title {
+
+.register_input li {
+  margin: 0;
+  width: 150px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #aaa;
+  box-shadow: 0 2px 4px #ececec inset;
+}
+
+.register_input li p {
+  float: left;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.register_input li p.message {
+  width: 120rpx;
+  margin-right: 40rpx;
+  text-align: right;
+}
+
+.register_input li input {
+  float: left;
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 38rpx;
+  padding: 0 15rpx;
+  border: 1px solid #ccc;
+  border-radius: 3rpx;
+  color: #aaa;
+  box-shadow: 0 2rpx 4rpx #ececec inset;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.login {
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  display: block;
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
   text-align: center;
-  margin-top:70rpx;
+  background: url(http://login.ruanko.com/registers/ruanko_002/images/login_bg.png);
 }
-.profile {
-  text-align: center;
-  margin-top:30rpx;
-  font-size: 14px;
-  color:#888;
-}
-.mini-btn{
-  margin-top: 50rpx;
-  margin-left: 50px;
-  margin-right: 50px;
+
+a:active {
+  color: #0074bc;
 }
