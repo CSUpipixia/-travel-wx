@@ -1,10 +1,12 @@
 <view class="basis-df margin-xs padding-sm radius text-center">
   <image src="/image/sign-in.png" style="width:450rpx" mode="widthFix"></image>
-  <view class="padding flex flex-direction">
-    <input class="margin-top round shadow shadow-lg bg-white" placeholder="请输入工号"></input>
-    <input class="margin-top round shadow shadow-lg bg-white" placeholder="请输入密码"></input>
-  </view>
-  <view class="padding flex flex-direction">
-    <button class="basis-sm padding-sm margin-xs cu-btn bg-cyan round lg shadow">登 录</button>
-  </view>
+  <form bindsubmit="bindSave">
+    <view class="padding flex flex-direction">
+      <input class="margin-top round shadow shadow-lg bg-white" placeholder="请输入工号" bindinput="bindUserIdInput"></input>
+      <input class="margin-top round shadow shadow-lg bg-white" placeholder="请输入密码" password="true" bindinput="bindPasswordInput"></input>
+    </view>
+    <view class="padding flex flex-direction">
+      <button class="basis-sm padding-sm margin-xs cu-btn bg-cyan round lg shadow" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登 录</button>
+    </view>
+  </form>
 </view>

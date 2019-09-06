@@ -53,14 +53,15 @@ module.exports = {
      * @POST('/user/login')
      * @Parameters({
      *  code: code,
-     *  type: 2
+     *  userid: 
+     *  password: 
      * })
      * @Response(200, body={
      *
      * })
      */
-    login: (code) => {
-      return request('/user/login', POST, {code, type:2})
+    login: (data) => {
+      return request('/user/login', POST, data)
     },
 
     /**
@@ -69,6 +70,7 @@ module.exports = {
     checkToken: (token) => {
       return request('/user/checktoken', GET, {token})
     },
+
     test: (data) => {
         return request('/test', GET, data)
     }
