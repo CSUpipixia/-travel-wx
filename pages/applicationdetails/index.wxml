@@ -1,0 +1,95 @@
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 出差申请信息
+  </view>
+  <view class="action">
+    <!-- <view class="cu-tag round bg-orange light">未提交</view>
+    <view class="cu-tag round bg-olive light">申请中</view> -->
+    <view class="cu-tag round bg-blue light">已通过</view>
+    <!-- <view class="cu-tag round bg-red light">未通过</view> -->
+  </view>
+</view>
+<view class="cu-list menu card-menu margin-top">
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-time text-green"></text>
+      <text class="text-grey">出差日期</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{DetailData.startdate}}</text>
+    </view>
+  </view>
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-similar text-green"></text>
+      <text class="text-grey">出差天数</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{DetailData.duration}}</text>
+    </view>
+  </view>
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-location text-green"></text>
+      <text class="text-grey">起始地</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{DetailData.start_site[0]}}，{{DetailData.start_site[1]}}，{{DetailData.start_site[2]}}</text>
+    </view>
+  </view>
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-activity text-green"></text>
+      <text class="text-grey">目的地</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{DetailData.destination[0]}}，{{DetailData.destination[1]}}，{{DetailData.destination[2]}}</text>
+    </view>
+  </view>
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-deliver text-green"></text>
+      <text class="text-grey">出行方式</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{DetailData.vehicle}}</text>
+    </view>
+  </view>
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-goods text-green"></text>
+      <text class="text-grey">出差原因</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{DetailData.business_reason}}</text>
+    </view>
+  </view>
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-post text-green"></text>
+      <text class="text-grey">备注</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">小目标还没有实现！</text>
+    </view>
+  </view>
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-notice text-green"></text>
+      <text class="text-grey">申请时间</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">小目标还没有实现！</text>
+    </view>
+  </view>
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <text class="cuIcon-rank text-green"></text>
+      <text class="text-grey">报销信息</text>
+    </view>
+    <view class="action">
+      <button class="cu-btn round bg-green shadow" bindtap="toRefundTap">
+        <text class="cuIcon-upload"></text> 去报销</button>
+    </view>
+  </view>
+</view>

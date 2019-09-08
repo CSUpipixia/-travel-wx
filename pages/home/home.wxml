@@ -6,7 +6,6 @@
       </view>
     </view>
   </view>
-
   <view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-applications">没有更多啦</view>
   <view class="cu-tabbar-height"></view>
 </scroll-view>

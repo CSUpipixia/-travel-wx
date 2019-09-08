@@ -45,7 +45,7 @@
   </view>
   <view class="cu-form-group align-start">
     <view class="title">备注</view>
-    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="请输入备注"></textarea>
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textarea BInput" placeholder="请输入备注"></textarea>
   </view>
   <view class="cu-form-group margin-top">
     <view class="title">阅读并同意

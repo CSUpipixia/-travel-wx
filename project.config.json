@@ -39,8 +39,29 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/applicationdetails/index",
+					"pathName": "pages/applicationdetails/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/refund/refund",
+					"pathName": "pages/refund/refund",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/apply/apply",
+					"pathName": "pages/apply/apply",
+					"scene": null
+				}
+			]
 		}
 	}
 }
