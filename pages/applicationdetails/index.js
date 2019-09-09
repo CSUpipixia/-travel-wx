@@ -1,3 +1,4 @@
+const WXAPI = require('../../wxapi/router');
 const app = getApp();
 
 Page({

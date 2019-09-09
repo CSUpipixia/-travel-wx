@@ -64,12 +64,14 @@ Component({
       wx.navigateTo({
         url: "/pages/applicationdetails/index?id=" + e.currentTarget.dataset.id
       })
-    }
+    },
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-    const that = this;
+  lifetimes: {
+    attached: function () {
+      console.log("加载完毕");
+    },
+    detached: function () {
+      // 在组件实例被从页面节点树移除时执行
+    },
   },
 })

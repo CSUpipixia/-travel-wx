@@ -1,4 +1,6 @@
-// pages/refund/refund.js
+const WXAPI = require('../../wxapi/router');
+const app = getApp();
+
 Page({
 
   /**
