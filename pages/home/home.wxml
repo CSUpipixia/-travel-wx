@@ -15,7 +15,11 @@
   <view class="cu-card">
     <view class="cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg)" bindtap="toDetailsTap" wx:for-items="{{applications}}" data-id="{{item.id}}" wx:key="{{index}}">
       <view class="cardTitle">
-        {{item.name}}
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-white text-green">申请中</view>
+          <view class="cu-tag line-white">{{item.time}}</view>
+        </view>
+        <text decode="{{true}}">　{{item.name}}</text>
       </view>
     </view>
   </view>

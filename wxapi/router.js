@@ -29,6 +29,12 @@ const request = (url, method, data) => {
 
 module.exports = {
     request,
+    getMyApplication: (uid) => {
+      return request('/getmyapplication', GET, uid)
+    },
+    /**
+     * 提交申请
+     */
     apply: (data) => {
       return request('/apply', POST, data)
     },

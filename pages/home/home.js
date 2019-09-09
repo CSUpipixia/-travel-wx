@@ -12,48 +12,9 @@ Component({
     applications: [{
         id: 1,
         name: "长沙 —— 上海",
-        price: 300
+        time: "2019-09-09",
+        status: ""
       },
-      {
-        id: 2,
-        name: "长沙 —— 深圳",
-        price: 400
-      },
-      {
-        id: 2,
-        name: "长沙 —— 深圳",
-        price: 400
-      },
-      {
-        id: 2,
-        name: "长沙 —— 深圳",
-        price: 400
-      },
-      {
-        id: 2,
-        name: "长沙 —— 深圳",
-        price: 400
-      },
-      {
-        id: 2,
-        name: "长沙 —— 深圳",
-        price: 400
-      },
-      {
-        id: 2,
-        name: "长沙 —— 深圳",
-        price: 400
-      },
-      {
-        id: 2,
-        name: "长沙 —— 深圳",
-        price: 400
-      },
-      {
-        id: 2,
-        name: "长沙 —— 深圳",
-        price: 400
-      }
     ],
     // 加载更多
     loadingMoreHidden: true
@@ -69,6 +30,14 @@ Component({
   lifetimes: {
     attached: function () {
       console.log("加载完毕");
+      let uid = wx.getStorageSync("uid");
+      if (uid) {
+        WXAPI.getMyApplication(uid).then(function(res) {
+          if (res,code == 200) {
+
+          }
+        })
+      }
     },
     detached: function () {
       // 在组件实例被从页面节点树移除时执行

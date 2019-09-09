@@ -6,6 +6,8 @@
     "pages/apply/apply",
     "pages/refund/refund",
     "pages/my/my",
+    "pages/my/log/log",
+    "pages/my/information/index",
     "pages/applicationdetails/index",
     "pages/test/test",
     "pages/logs/logs",
