@@ -1,3 +1,15 @@
+<cu-custom class="" bgImage="/image/travel-top.png">
+  <view slot="content">我的申请</view>
+</cu-custom>
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-gradual-green shadow-blur round">搜索</button>
+  </view>
+</view>
 <scroll-view scroll-y class="scrollPage">
   <view class="cu-card">
     <view class="cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg)" bindtap="toDetailsTap" wx:for-items="{{applications}}" data-id="{{item.id}}" wx:key="{{index}}">

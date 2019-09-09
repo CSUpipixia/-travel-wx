@@ -1,3 +1,7 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">上传凭证</view>
+</cu-custom>
 <form>
 	<view class="cu-bar bg-white margin-top">
 		<view class="action">
@@ -21,7 +25,6 @@
 		</view>
 	</view>
 </form>
-
 <view class="padding flex flex-direction">
   <view class="flex  p-xs margin-bottom-sm mb-sm">
     <button class="flex-twice padding-sm margin-xs cu-btn bg-cyan lg">提交</button>

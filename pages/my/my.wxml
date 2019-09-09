@@ -11,17 +11,17 @@
   </view>
   <view class="padding flex text-center text-grey bg-white shadow-warp">
     <view class="flex flex-sub flex-direction solid-right">
-      <view class="text-xxl text-orange">27</view>
+      <view class="text-xxl text-orange">{{allTimes}}</view>
       <view class="margin-top-sm">
         <text class="cuIcon-goodsfill"></text> 出差次数</view>
     </view>
     <view class="flex flex-sub flex-direction solid-right">
-      <view class="text-xxl text-blue">10</view>
+      <view class="text-xxl text-blue">{{allCitys}}</view>
       <view class="margin-top-sm">
         <text class="cuIcon-favorfill"></text> 去过城市</view>
     </view>
     <view class="flex flex-sub flex-direction">
-      <view class="text-xxl text-green">1873</view>
+      <view class="text-xxl text-green">{{allRefunds}}</view>
       <view class="margin-top-sm">
         <text class="cuIcon-moneybagfill"></text> 报销金额</view>
     </view>

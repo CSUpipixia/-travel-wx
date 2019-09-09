@@ -1,3 +1,7 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">出差申请</view>
+</cu-custom>
 <form>
   <view class="cu-form-group margin-top">
     <view class="title">起始日期</view>

@@ -12,11 +12,10 @@
     "custom-tab-bar/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#39b54a",
     "navigationBarTitleText": "差旅系统",
-    "navigationBarTextStyle": "black",
-    "onReachBottomDistance": 50
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
   },
   "networkTimeout": {
     "request": 10000,
@@ -24,9 +23,7 @@
   },
   "debug": true,
   "usingComponents": {
-    "mp-searchbar": "/weui/searchbar/searchbar",
-    "mp-dialog": "/weui/dialog/dialog",
-    "mp-badge": "/weui/badge/badge"
+    "cu-custom": "/colorui/components/cu-custom"
   },
   "sitemapLocation": "sitemap.json"
 }
