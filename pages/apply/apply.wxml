@@ -49,19 +49,20 @@
   </view>
   <view class="cu-form-group align-start">
     <view class="title">备注</view>
-    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textarea BInput" placeholder="请输入备注"></textarea>
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textarea BInput" placeholder="请输入备注">{{DetailData.remark}}</textarea>
   </view>
   <view class="cu-form-group margin-top">
     <view class="title">阅读并同意
       <a href="javascript:void(0);" class="text-blue">《相关条款》</a>
     </view>
-    <checkbox class="round blue"></checkbox>
+    <checkbox-group bindchange="CheckboxChange">
+      <checkbox class="round blue" value="1" bindchange="CheckboxChange"></checkbox>
+    </checkbox-group>
+  </view>
+  <view class="padding flex flex-direction">
+    <view class="flex  p-xs margin-bottom-sm mb-sm">
+      <button class="flex-sub padding-sm margin-xs cu-btn bg-grey lg" bindtap="formSave">保存</button>
+      <button class="flex-twice padding-sm margin-xs cu-btn bg-blue lg" disabled="{{CheckAgree?false:true}}" type="" bindtap="formSubmit">提交</button>
+    </view>
   </view>
 </form>
-
-<view class="padding flex flex-direction">
-  <view class="flex  p-xs margin-bottom-sm mb-sm">
-    <button class="flex-sub padding-sm margin-xs cu-btn bg-grey lg">保存</button>
-    <button class="flex-twice padding-sm margin-xs cu-btn bg-blue lg">提交</button>
-  </view>
-</view>

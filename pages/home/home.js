@@ -1,3 +1,4 @@
+const WXAPI = require('../../wxapi/router');
 const app = getApp();
 
 Component({
@@ -57,7 +58,6 @@ Component({
     // 加载更多
     loadingMoreHidden: true
   },
-
   methods: {
     // 查看申请表详细信息
     toDetailsTap: function(e) {
