@@ -1,5 +1,5 @@
+<image src='/image/travel-height.png' mode='widthFix' class='png' style='width:100%;height:100%' z-index='0'></image>
 <view class="basis-df margin-xs padding-sm radius text-center">
-  <image src="/image/sign-in.png" style="width:450rpx" mode="widthFix"></image>
   <form bindsubmit="bindSave">
     <view class="padding flex flex-direction">
       <input class="margin-top round shadow shadow-lg bg-white" placeholder="请输入工号" bindinput="bindUserIdInput"></input>
